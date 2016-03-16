@@ -586,6 +586,8 @@ cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
 S["LTLIBOBJS"]=""
 S["LIBOBJS"]=""
 S["PWD"]="/home/uuhan/code/haskell/sample/wai-cgi-test"
+S["FCGI"]="yes"
+S["NGINX"]="yes"
 S["target_alias"]=""
 S["host_alias"]=""
 S["build_alias"]=""

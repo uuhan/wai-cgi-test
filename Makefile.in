@@ -1,6 +1,7 @@
-all:
-	pkill -9 nginx
+all: 
+	rm -rf dist/web.sock
 	nginx -p @PWD@ -c nginx.conf
+	fcgiwrap -s unix:@PWD@/dist/web.sock
 
 stop:
 	pkill -9 nginx

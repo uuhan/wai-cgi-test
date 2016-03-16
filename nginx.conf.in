@@ -9,13 +9,15 @@ http {
         error_log       @PWD@/dist/error.log;
 
         location /wai {
-            fastcgi_param   SCRIPT_FILENAME @PWD@;
+            include         @PWD@/fastcgi_params;
+            fastcgi_param   SCRIPT_FILENAME @PWD@/dist/build/wai-cgi-test/wai-cgi-test;
             fastcgi_param   DOCUMENT_ROOT   @PWD@;
             fastcgi_pass    unix:@PWD@/dist/web.sock;
         }
 
         location /yesod {
-            fastcgi_param   SCRIPT_FILENAME @PWD@;
+            include         @PWD@/fastcgi_params;
+            fastcgi_param   SCRIPT_FILENAME @PWD@/dist/build/yesod-cgi-test/yesod-cgi-test;
             fastcgi_param   DOCUMENT_ROOT   @PWD@;
             fastcgi_pass    unix:@PWD@/dist/web.sock;
         }
