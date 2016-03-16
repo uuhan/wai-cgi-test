@@ -15,6 +15,7 @@ extra-source-files:
     fastcgi_params
     Makefile.in
     autogen.sh
+    README.md
 extra-tmp-files:
     Makefile config.log
     nginx.conf wai-cgi-test.buildinfo
