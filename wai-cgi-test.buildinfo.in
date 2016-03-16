@@ -1,2 +1,5 @@
-wai-cgi-test
-yesod-cgi-test
+executable: wai-cgi-test
+ghc-options: -O2
+
+executable: yesod-cgi-test
+ghc-options: -O2

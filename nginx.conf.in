@@ -1,0 +1,25 @@
+events {
+    worker_connections 1024;
+    use epoll;
+}
+http {
+    server {
+        listen          3000;
+        access_log      @PWD@/dist/access.log;
+        error_log       @PWD@/dist/error.log;
+
+        location /wai {
+            fastcgi_param   SCRIPT_FILENAME @PWD@;
+            fastcgi_param   DOCUMENT_ROOT   @PWD@;
+            fastcgi_pass    unix:@PWD@/dist/web.sock;
+        }
+
+        location /yesod {
+            fastcgi_param   SCRIPT_FILENAME @PWD@;
+            fastcgi_param   DOCUMENT_ROOT   @PWD@;
+            fastcgi_pass    unix:@PWD@/dist/web.sock;
+        }
+    }
+}
+
+pid @PWD@/dist/nginx.pid;

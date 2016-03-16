@@ -7,8 +7,17 @@ author:              uuhan
 maintainer:          xuminhui189@gmail.com
 category:            Web
 build-type:          Configure
--- extra-source-files:  
 cabal-version:       >=1.10
+extra-source-files:  
+    configure configure.ac config.status
+    config/install-sh config/missing
+    nginx.conf.in wai-cgi-test.buildinfo.in
+    Makefile.in
+    autogen.sh
+extra-tmp-files:
+    Makefile config.log
+    nginx.conf wai-cgi-test.buildinfo
+    autom4te.cache
 
 executable wai-cgi-test
   main-is:             wai.hs

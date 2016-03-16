@@ -1,0 +1,6 @@
+all:
+	pkill -9 nginx
+	nginx -p @PWD@ -c nginx.conf
+
+stop:
+	pkill -9 nginx
