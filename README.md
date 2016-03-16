@@ -1,7 +1,9 @@
 Maybe there is a bug in yesod framework when the yesod app is used to be deployed as a CGI application.
 
 cabal build
+
 make stop 
+
 make 
 
 then visit 
