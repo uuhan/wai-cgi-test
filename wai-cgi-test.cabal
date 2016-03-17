@@ -25,7 +25,9 @@ executable wai-cgi-test
   main-is:             wai.hs
   build-depends:       base >=4.8 && <4.9
                      , wai == 3.2.0
-                     , wai-extra == 3.0.14
+                     --, wai-extra == 3.0.14
+                     --  This version of wai-extra worked
+                     , wai-extra == 3.0.14.3
                      , http-types
   hs-source-dirs:      src
   default-language:    Haskell2010
@@ -36,7 +38,9 @@ executable yesod-cgi-test
   build-depends:       base >=4.8 && <4.9
                      , yesod == 1.4.2
                      , wai == 3.2.0
-                     , wai-extra == 3.0.14
+                     --, wai-extra == 3.0.14
+                     --  This version of wai-extra worked
+                     , wai-extra == 3.0.14.3
   hs-source-dirs:      src
   default-language:    Haskell2010
   default-extensions:  OverloadedStrings
